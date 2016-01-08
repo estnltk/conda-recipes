@@ -1,0 +1,34 @@
+package:
+  name: urllib3
+  version: "1.12"
+
+source:
+  fn: urllib3-1.12.tar.gz
+  url: https://pypi.python.org/packages/source/u/urllib3/urllib3-1.12.tar.gz
+  md5: befd9dbb2c373681bd88710ba96abbdb
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  imports:
+    - urllib3
+    - urllib3.contrib
+    - urllib3.packages
+    - urllib3.packages.ssl_match_hostname
+    - urllib3.util
+
+  requires:
+    - mock
+    - nose
+    - tornado
+
+about:
+  home: http://urllib3.readthedocs.org/
+  license: MIT License
+  summary: 'HTTP library with thread-safe connection pooling, file post, and more.'

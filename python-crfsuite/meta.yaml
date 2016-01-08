@@ -1,0 +1,28 @@
+package:
+  name: python-crfsuite
+  version: "0.8.4"
+
+source:
+  fn: python-crfsuite-0.8.4.tar.gz
+  url: https://pypi.python.org/packages/source/p/python-crfsuite/python-crfsuite-0.8.4.tar.gz
+  md5: 35e177d31c8012d2485c51a2ebf32009
+
+requirements:
+  build:
+    - gcc
+    - libgcc
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  imports:
+    - pycrfsuite
+
+
+about:
+  home: https://github.com/tpeng/python-crfsuite
+  license: MIT License
+  summary: 'Python binding for CRFsuite'

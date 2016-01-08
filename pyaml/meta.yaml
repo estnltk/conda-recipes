@@ -1,0 +1,28 @@
+package:
+  name: pyaml
+  version: "15.8.2"
+
+source:
+  fn: pyaml-15.8.2.tar.gz
+  url: https://pypi.python.org/packages/source/p/pyaml/pyaml-15.8.2.tar.gz
+  md5: e3a39e02dffaf5f6efa8ccdd22745739
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - pyyaml
+
+  run:
+    - python
+    - pyyaml
+
+test:
+  imports:
+    - pyaml
+    - pyaml.tests
+
+about:
+  home: https://github.com/mk-fg/pretty-yaml
+  license: WTFPL
+  summary: 'PyYAML-based module to produce pretty and readable YAML-serialized data'

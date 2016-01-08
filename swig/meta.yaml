@@ -1,0 +1,27 @@
+package:
+  name: swig
+  version: "3.0.8"
+
+source:
+  git_url: https://github.com/swig/swig.git
+  git_rev: rel-3.0.8
+
+
+requirements:
+  build:
+    - gcc
+    - libgcc
+    - pcre
+    - autoconf
+
+  run:
+    - pcre
+
+
+build:
+  detect_binary_files_with_prefix: True
+  number: 3
+
+test:
+  commands:
+    - swig -help

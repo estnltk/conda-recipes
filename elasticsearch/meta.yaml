@@ -1,0 +1,39 @@
+package:
+  name: elasticsearch
+  version: "2.1.0"
+
+source:
+  fn: elasticsearch-2.1.0.tar.gz
+  url: https://pypi.python.org/packages/source/e/elasticsearch/elasticsearch-2.1.0.tar.gz
+  md5: f4c2385effc4334f2736fafed7567eaa
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - urllib3 >=1.8,<2.0
+
+  run:
+    - python
+    - urllib3 >=1.8,<2.0
+
+test:
+  imports:
+    - elasticsearch
+    - elasticsearch.client
+    - elasticsearch.connection
+    - elasticsearch.helpers
+
+
+  requires:
+    - coverage
+    - mock
+    - nose
+    - nosexcover
+    - pyaml
+    - requests >=1.0.0,<3.0.0
+
+about:
+  home: https://github.com/elastic/elasticsearch-py
+  license: Apache Software License
+  summary: 'Python client for Elasticsearch'

@@ -1,0 +1,36 @@
+package:
+  name: coverage
+  version: "4.0.3"
+
+source:
+  fn: coverage-4.0.3.tar.gz
+  url: https://pypi.python.org/packages/source/c/coverage/coverage-4.0.3.tar.gz
+  md5: c7d3db1882484022c81bf619be7b6365
+build:
+  entry_points:
+    - coverage = coverage.cmdline:main
+    - coverage3 = coverage.cmdline:main
+    - coverage-3.5 = coverage.cmdline:main
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - coverage
+
+  commands:
+    - coverage --help
+    - coverage3 --help
+    - coverage-3.5 --help
+
+about:
+  home: https://coverage.readthedocs.org
+  license: Apache Software License
+  summary: 'Code coverage measurement for Python'
