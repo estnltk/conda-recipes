@@ -12,7 +12,6 @@ requirements:
     - gcc
     - libgcc
     - pcre
-    - autoconf
 
   run:
     - pcre
