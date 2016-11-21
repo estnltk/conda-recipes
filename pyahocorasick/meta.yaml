@@ -1,0 +1,50 @@
+package:
+  name: pyahocorasick
+  version: "1.1.4"
+
+source:
+  fn: pyahocorasick-1.1.4.tar.bz2
+  url: https://pypi.python.org/packages/1e/75/8005d086cac4cc41d3b320d338972c5e5c6a21f88472f21ac9d0e031d300/pyahocorasick-1.1.4.tar.bz2
+  md5: ad445b6648dc06e9040705ce1ccb4384
+
+build:
+  #noarch_python: True
+  detect_binary_files_with_prefix: 'true'
+  preserve_egg_dir: True
+  number: 0
+  string: {{ environ.get('PY_VER', '') }}
+
+requirements:
+  build:
+    - python
+    - gcc
+    - setuptools
+
+  run:
+    - python
+
+# test:
+  # Python imports
+  # imports:
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://github.com/WojciechMula/pyahocorasick
+  license: BSD License
+  summary: 'pyahocorasick is a fast and memory efficient library for exact or approximate multi-pattern string search.  With the ahocorasick.Automaton class, you can find multiple key strings occurrences at once in some input text.  You can use it as a plain dict-like Trie or convert a Trie to an automaton for efficient Aho-Corasick search.  Implemented in C and tested on Python 2.7 and 3.4+.  Works on Linux, Mac and Windows. BSD-3-clause license.'
+  license_family: BSD
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
