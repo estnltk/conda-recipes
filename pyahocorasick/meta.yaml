@@ -3,9 +3,13 @@ package:
   version: "1.1.4"
 
 source:
-  fn: pyahocorasick-1.1.4.tar.bz2
-  url: https://pypi.python.org/packages/1e/75/8005d086cac4cc41d3b320d338972c5e5c6a21f88472f21ac9d0e031d300/pyahocorasick-1.1.4.tar.bz2
-  md5: ad445b6648dc06e9040705ce1ccb4384
+  #fn: pyahocorasick-1.1.4.tar.bz2
+  #url: https://pypi.python.org/packages/1e/75/8005d086cac4cc41d3b320d338972c5e5c6a21f88472f21ac9d0e031d300/pyahocorasick-1.1.4.tar.bz2
+  #md5: ad445b6648dc06e9040705ce1ccb4384
+
+  #points to fork
+  #https://github.com/estnltk/pyahocorasick
+  path: ./pyahocorasick
 
 build:
   #noarch_python: True
@@ -17,7 +21,6 @@ build:
 requirements:
   build:
     - python
-    - gcc
     - setuptools
 
   run:
